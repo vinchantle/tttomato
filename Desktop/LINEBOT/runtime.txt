@@ -1,2 +1,1 @@
 python-3.7.9
-anaconda-client==1.7.2
