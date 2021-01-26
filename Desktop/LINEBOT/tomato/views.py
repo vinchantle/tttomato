@@ -18,7 +18,7 @@ handler=WebhookHandler(settings.LINE_CHANNEL_SECRET)
 app=Flask(__name__)
 
 @app.route("https://tttomato.herokuapp.com/callback",method=['POST'])
-def webhook_view(request):
+def webhook_view(request=HttpRequest):
     signature=request.headers["X-Line-Signature"]
     body_decode=request.body.decode('utf-8')
     
